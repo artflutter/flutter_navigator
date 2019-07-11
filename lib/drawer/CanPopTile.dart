@@ -7,11 +7,12 @@ class CanPopTile extends StatelessWidget {
       title: Text('canPop'),
       onTap: () {
         final navigator = Navigator.of(context);
+        final scaffold = Scaffold.of(context);
 
         if (navigator.canPop()) {
           navigator.pop();
 
-          Scaffold.of(context)
+          scaffold
             ..showSnackBar(
               SnackBar(
                 content: Text("Just poped the drawer"),
@@ -19,7 +20,7 @@ class CanPopTile extends StatelessWidget {
                   label: 'Pop more',
                   onPressed: () {
                     if (!navigator.canPop()) {
-                      Scaffold.of(context)
+                      scaffold
                         ..showSnackBar(
                           SnackBar(
                             content: Text("There is nothing to pop"),
