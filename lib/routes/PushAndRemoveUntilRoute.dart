@@ -7,19 +7,23 @@ class PushAndRemoveUntil extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push and remove until',
-      buttonTitle: 'Press to go back',
-      onPressed: () => Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(
-          builder: (context) => SampleRouteItem(
-            title: 'Replaced page',
-            buttonTitle: 'Press to go back',
-            onPressed: () => Navigator.pop(context),
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SampleRouteItem(
+              title: 'Replaced page',
+              button: RaisedButton(
+                child: Text('Press to go back'),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ),
           ),
+          (Route<dynamic> route) {
+            return route is ModalRoute && route.settings.name == '/';
+          },
         ),
-        (Route<dynamic> route) {
-          return route is ModalRoute && route.settings.name == '/';
-        },
       ),
     );
   }

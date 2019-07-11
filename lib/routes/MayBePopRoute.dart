@@ -7,8 +7,10 @@ class MayBePopRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Maybe pop',
-      buttonTitle: 'Press to go back',
-      onPressed: () => Navigator.maybePop(context),
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.maybePop(context),
+      ),
     );
   }
 }

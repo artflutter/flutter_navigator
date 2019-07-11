@@ -7,8 +7,10 @@ class PopAndPushNamed extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Pop and push named',
-      buttonTitle: 'Press to go back',
-      onPressed: () => Navigator.pop(context),
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

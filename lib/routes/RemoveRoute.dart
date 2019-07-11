@@ -7,10 +7,10 @@ class RemoveRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Remove route',
-      buttonTitle: 'Remove current route',
-      onPressed: () {
-        Navigator.removeRoute(context, ModalRoute.of(context));
-      },
+      button: RaisedButton(
+        child: Text('Remove current route'),
+        onPressed: () => Navigator.removeRoute(context, ModalRoute.of(context)),
+      ),
     );
   }
 }

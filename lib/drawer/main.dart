@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'CanPopTile.dart';
 import 'Header.dart';
+import 'MayBePopTile.dart';
 import 'PopAndPushNamedTile.dart';
+import 'PopTile.dart';
 import 'PushNamed.dart';
 import 'PushTile.dart';
 import 'RemoveRouteBelowTile.dart';
@@ -18,6 +21,9 @@ List<Widget> drawerContent() {
   return <Widget>[
     Header(),
     RemoveRouteBelowTile(),
+    MayBePopTile(),
+    CanPopTile(),
+    PopTile(),
     PopUntilTile(),
     RemoveRouteTile(),
     NotFoundRouteTile(),

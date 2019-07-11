@@ -7,14 +7,18 @@ class PushReplacementRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push replacement',
-      buttonTitle: 'Replace current route',
-      onPressed: () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => SampleRouteItem(
-            title: 'Replaced route',
-            buttonTitle: 'Press to go back',
-            onPressed: () => Navigator.pop(context),
+      button: RaisedButton(
+        child: Text('Replace current route'),
+        onPressed: () => Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SampleRouteItem(
+              title: 'Replaced route',
+              button: RaisedButton(
+                child: Text('Press to go back'),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ),
           ),
         ),
       ),

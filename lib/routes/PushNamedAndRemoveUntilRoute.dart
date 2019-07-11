@@ -7,13 +7,15 @@ class PushNamedAndRemoveUntil extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push named and remove until',
-      buttonTitle: 'Press to go back--',
-      onPressed: () => Navigator.pushNamedAndRemoveUntil(
-        context,
-        '/todo',
-        (Route<dynamic> route) {
-          return route is ModalRoute && route.settings.name == '/';
-        },
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/todo',
+          (Route<dynamic> route) {
+            return route is ModalRoute && route.settings.name == '/';
+          },
+        ),
       ),
     );
   }

@@ -36,41 +36,51 @@ class MyApp extends StatelessWidget {
         '/removeRoute': (context) => RemoveRoute(),
         '/replace': (context) => SampleRouteItem(
               title: 'Replace route',
-              buttonTitle: 'Replcae current route',
-              onPressed: () {
-                replaceRoute = ModalRoute.of(context);
-                Navigator.pushNamed(context, '/replaceAction');
-              },
+              button: RaisedButton(
+                child: Text('Replcae current route'),
+                onPressed: () {
+                  replaceRoute = ModalRoute.of(context);
+                  Navigator.pushNamed(context, '/replaceAction');
+                },
+              ),
             ),
         '/replaceAction': (context) => SampleRouteItem(
               title: 'Replace route',
-              buttonTitle: 'Replcae current route',
-              onPressed: () {
-                Navigator.replace(
-                  context,
-                  oldRoute: replaceRoute,
-                  newRoute: MaterialPageRoute(
-                    builder: (context) => SampleRouteItem(
-                      title: 'This route is a replacment',
-                      buttonTitle: 'Press to go back',
-                      onPressed: () => Navigator.pop(context),
+              button: RaisedButton(
+                child: Text('Replcae current route'),
+                onPressed: () {
+                  Navigator.replace(
+                    context,
+                    oldRoute: replaceRoute,
+                    newRoute: MaterialPageRoute(
+                      builder: (context) => SampleRouteItem(
+                        title: 'This route is a replacment',
+                        button: RaisedButton(
+                          child: Text('Press to go back'),
+                          onPressed: () => Navigator.pop(context),
+                        ),
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
         '/replaceRouteBelow': (context) => ReplaceRouteBelow(),
         '/removeRouteBelow': (context) => ReplaceRouteBelow(),
         '/pushReplacementNamed': (context) => SampleRouteItem(
               title: 'Push replacement named',
-              buttonTitle: 'Replace current route',
-              onPressed: () =>
-                  Navigator.pushReplacementNamed(context, '/namedReplacement'),
+              button: RaisedButton(
+                child: Text('Replace current route'),
+                onPressed: () => Navigator.pushReplacementNamed(
+                    context, '/namedReplacement'),
+              ),
             ),
         '/namedReplacement': (context) => SampleRouteItem(
               title: 'Named replacement',
-              buttonTitle: 'Press to go back',
-              onPressed: () => Navigator.pop(context),
+              button: RaisedButton(
+                child: Text('Press to go back'),
+                onPressed: () => Navigator.pop(context),
+              ),
             ),
         '/popAndPushNamed': (context) => PopAndPushNamed(),
         '/popUntil': (context) => PopUntilRoute(),
@@ -218,57 +228,6 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: EdgeInsets.zero,
             children: <Widget>[
               ...drawerContent(),
-
-//              ListTile(
-//                title: Text('popAndPushNamed'),
-//                onTap: () {
-//                  Navigator.pushNamed(context, '/popAndPushNamed');
-//                },
-//              ),
-
-              ListTile(
-                title: Text('canPop'),
-                onTap: () {
-                  final navigator = Navigator.of(context);
-
-                  if (navigator.canPop()) {
-                    navigator.pop();
-
-                    scaffoldKey.currentState
-                      ..showSnackBar(
-                        SnackBar(
-                          content: Text("Just poped the drawer"),
-                          action: SnackBarAction(
-                            label: 'Pop more',
-                            onPressed: () {
-                              if (!navigator.canPop()) {
-                                scaffoldKey.currentState
-                                  ..showSnackBar(
-                                    SnackBar(
-                                      content: Text("There is nothing to pop"),
-                                    ),
-                                  );
-                              }
-                            },
-                          ),
-                        ),
-                      );
-                  }
-                },
-              ),
-              ListTile(
-                title: Text('pop'),
-                onTap: () {
-                  Navigator.pop(context);
-                  scaffoldKey.currentState
-                    ..removeCurrentSnackBar()
-                    ..showSnackBar(
-                      SnackBar(
-                        content: Text("Just poped the drawer"),
-                      ),
-                    );
-                },
-              ),
 
 //              ListTile(
 //                title: Text('Todo list'),

@@ -7,10 +7,12 @@ class PopUntilRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Pop until',
-      buttonTitle: 'Press to execute popUntil',
-      onPressed: () => Navigator.popUntil(
-        context,
-        ModalRoute.withName('/'),
+      button: RaisedButton(
+        child: Text('Press to execute popUntil'),
+        onPressed: () => Navigator.popUntil(
+          context,
+          ModalRoute.withName('/'),
+        ),
       ),
     );
   }

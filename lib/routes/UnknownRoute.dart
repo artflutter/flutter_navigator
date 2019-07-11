@@ -7,8 +7,10 @@ class UnknownRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Not found route',
-      buttonTitle: 'Press to go back',
-      onPressed: () => Navigator.pop(context),
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

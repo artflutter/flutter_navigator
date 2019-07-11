@@ -7,8 +7,10 @@ class PushNamedRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push named',
-      buttonTitle: 'Press to go back',
-      onPressed: () => Navigator.pop(context),
+      button: RaisedButton(
+        child: Text('Press to go back'),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

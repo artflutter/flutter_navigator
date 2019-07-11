@@ -12,8 +12,10 @@ class PushTile extends StatelessWidget {
           MaterialPageRoute(
             builder: (context) => SampleRouteItem(
               title: 'Push',
-              buttonTitle: 'Press to go back',
-              onPressed: () => Navigator.pop(context),
+              button: RaisedButton(
+                child: Text('Press to go back'),
+                onPressed: () => Navigator.pop(context),
+              ),
             ),
           ),
         );
