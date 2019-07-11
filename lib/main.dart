@@ -219,103 +219,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               ...drawerContent(),
 
-              ListTile(
-                title: Text('removeRoute'),
-                onTap: () => Navigator.pushNamed(context, '/removeRoute'),
-              ),
-              ListTile(
-                title: Text('Not found route'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/notFoundRoute');
-                },
-              ),
-              ListTile(
-                title: Text('pushReplacementNamed'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/pushReplacementNamed');
-                },
-              ),
 //              ListTile(
 //                title: Text('popAndPushNamed'),
 //                onTap: () {
 //                  Navigator.pushNamed(context, '/popAndPushNamed');
 //                },
 //              ),
-              ListTile(
-                title: Text('pushNamedAndRemoveUntil'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/pushNamedAndRemoveUntil');
-                },
-              ),
-              ListTile(
-                title: Text('pushAndRemoveUntil'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/pushAndRemoveUntil');
-                },
-              ),
-              ListTile(
-                title: Text('pushReplacement'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/pushReplacement');
-                },
-              ),
-              ListTile(
-                title: Text('replace'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/replace');
-                },
-              ),
-              ListTile(
-                title: Text('replaceRouteBelow'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/replaceRouteBelow');
-                },
-              ),
-              ListTile(
-                title: Text('popUntil'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/popUntil');
-                },
-              ),
-              ListTile(
-                title: Text('maybePop'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/maybePop');
-                },
-                onLongPress: () async {
-                  scaffoldKey.currentState
-                    ..removeCurrentSnackBar()
-                    ..showSnackBar(
-                      SnackBar(
-                        content: Text(
-                            "MaybePop triggered 2 times but only one pop of Dreawer occured"),
-                      ),
-                    );
-                  await Navigator.maybePop(context);
-                  await Navigator.maybePop(context);
-                },
-              ),
-              ListTile(
-                title: Text('push'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SampleRouteItem(
-                        title: 'Push',
-                        buttonTitle: 'Press to go back',
-                        onPressed: () => Navigator.pop(context),
-                      ),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                title: Text('Push named route'),
-                onTap: () {
-                  Navigator.pushNamed(context, '/pushNamed');
-                },
-              ),
 
               ListTile(
                 title: Text('canPop'),
@@ -360,12 +269,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                 },
               ),
-              ListTile(
-                title: Text('popAndPushNamed'),
-                onTap: () {
-                  Navigator.popAndPushNamed(context, '/popAndPushNamed');
-                },
-              ),
+
 //              ListTile(
 //                title: Text('Todo list'),
 //                onTap: () {
