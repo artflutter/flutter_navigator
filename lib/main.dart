@@ -220,70 +220,9 @@ class _MyHomePageState extends State<MyHomePage> {
 //          ]),
 //        ),
         drawer: Drawer(
-          // Add a ListView to the drawer. This ensures the user can scroll
-          // through the options in the drawer if there isn't enough vertical
-          // space to fit everything.
           child: ListView(
-            // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
-            children: <Widget>[
-              ...drawerContent(),
-
-//              ListTile(
-//                title: Text('Todo list'),
-//                onTap: () {
-//                  if (Navigator.canPop(context)) {
-//                    Navigator.pop(context);
-//                  }
-//
-//                  Navigator.pushNamed(context, '/todo');
-//                },
-//              ),
-//              ListTile(
-//                title: Text('Direct push'),
-//                onTap: () {
-//                  Navigator.push(
-//                    context,
-//                    MaterialPageRoute(builder: (context) => SecondRoute()),
-//                  );
-//                },
-//              ),
-//              ListTile(
-//                title: Text('Hero animation'),
-//                onTap: () {
-//                  Navigator.pushNamed(context, '/hero');
-//                },
-//              ),
-//              ListTile(
-//                title: Text('Popup route'),
-//                onTap: () {
-//                  Navigator.push(
-//                    context,
-//                    PageRouteBuilder(
-//                      opaque: false,
-//                      pageBuilder: (BuildContext context, _, __) {
-//                        return GestureDetector(
-//                            onTap: () {
-//                              Navigator.pop(context);
-//                            },
-//                            child: Center(child: Text('My PageRoute')));
-//                      },
-//                      transitionsBuilder: (___, Animation<double> animation,
-//                          ____, Widget child) {
-//                        return FadeTransition(
-//                          opacity: animation,
-//                          child: RotationTransition(
-//                            turns: Tween<double>(begin: 0.1, end: 1.0)
-//                                .animate(animation),
-//                            child: child,
-//                          ),
-//                        );
-//                      },
-//                    ),
-//                  );
-//                },
-//              ),
-            ],
+            children: drawerContent(),
           ),
         ),
         appBar: appBar,
