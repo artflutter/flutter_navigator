@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Description.dart';
 import 'drawer/main.dart';
 
 class HomePage extends StatefulWidget {
@@ -38,20 +39,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         appBar: appBar,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'You have pushed the button this many times:',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.display1,
-              ),
-            ],
-          ),
-        ),
+        body: Description(
+            title: 'asdfasdf',
+            description: ['asdfasdf', 'fasdfasdf'],
+            button: null),
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[

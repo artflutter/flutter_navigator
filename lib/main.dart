@@ -6,6 +6,7 @@ import 'package:flutter_routing/drawer/main.dart';
 
 import 'HomePage.dart';
 import 'routes/NamedReplacementRoute.dart';
+import 'routes/OnUnknownRoute.dart';
 import 'routes/PopAndPushNamed.dart';
 import 'routes/PopUntilRoute.dart';
 import 'routes/PushAndRemoveUntilRoute.dart';
@@ -17,7 +18,6 @@ import 'routes/MayBePopRoute.dart';
 import 'routes/RemoveRoute.dart';
 import 'routes/ReplaceRoute.dart';
 import 'routes/ReplaceRouteBelow.dart';
-import 'routes/UnknownRoute.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       onUnknownRoute: (RouteSettings setting) =>
-          MaterialPageRoute(builder: (context) => UnknownRoute()),
+          MaterialPageRoute(builder: (context) => OnUnknownRoute()),
       routes: {
         '/maybePop': (context) => MayBePopRoute(),
         '/pushReplacement': (context) => PushReplacementRoute(),
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         '/pushAndRemoveUntil': (context) => PushAndRemoveUntil(),
         '/todo': (context) => ToDoRoute(),
       },
-      home: HomePage(title: 'Flutter Demo Home Page'),
+      home: HomePage(title: 'Flutter Navigation Demo'),
     );
   }
 }

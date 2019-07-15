@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class SampleRouteItem extends StatelessWidget {
   final String title;
 
-  final RaisedButton button;
+  final Widget button;
 
   SampleRouteItem({Key key, @required this.title, @required this.button})
       : super(key: key);
@@ -14,6 +14,6 @@ class SampleRouteItem extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.title),
         ),
-        body: Center(child: this.button));
+        body: this.button);
   }
 }

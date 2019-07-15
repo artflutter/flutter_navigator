@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class NotFoundRouteTile extends StatelessWidget {
+class ObserversTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('Not found route'),
+      title: Text('observers'),
       onTap: () {
-        Navigator.popAndPushNamed(context, '/notFoundRoute');
+        Navigator.popAndPushNamed(context, '/observers');
       },
     );
   }
