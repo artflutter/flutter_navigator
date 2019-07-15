@@ -16,6 +16,8 @@ import 'PushReplacement.dart';
 import 'PushReplacementNamedTile.dart';
 import 'RemoveRouteTile.dart';
 import 'ReplaceRouteBelowTile.dart';
+import 'ReplaceTile.dart';
+import 'TodoTile.dart';
 
 List<Widget> drawerContent() {
   return <Widget>[
@@ -34,6 +36,8 @@ List<Widget> drawerContent() {
     ReplaceRouteBelowTile(),
     PushNamed(),
     PushTile(),
-    PopAndPushNamedTile()
+    ReplaceTile(),
+    PopAndPushNamedTile(),
+    TodoTile()
   ];
 }

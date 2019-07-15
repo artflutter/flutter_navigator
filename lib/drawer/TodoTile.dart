@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ReplaceTile extends StatelessWidget {
+class TodoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('replace'),
+      title: Text('Todo'),
       onTap: () {
-        Navigator.pushNamed(context, '/replace');
+        Navigator.pushNamed(context, '/todo');
       },
     );
   }
