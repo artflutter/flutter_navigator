@@ -6,7 +6,7 @@ class CanPopTile extends StatelessWidget {
     return ListTile(
       title: Text('+++canPop'),
       onTap: () {
-        Navigator.popAndPushNamed(context, '/canPop');
+        Navigator.pushNamed(context, '/canPop');
       },
     );
   }

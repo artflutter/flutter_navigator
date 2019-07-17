@@ -20,9 +20,10 @@ import 'PushReplacementNamedTile.dart';
 import 'RemoveRouteTile.dart';
 import 'ReplaceRouteBelowTile.dart';
 import 'ReplaceTile.dart';
-import 'SamplesTile.dart';
+
+//import 'SamplesTile.dart';
 import 'StaticTile.dart';
-import 'TodoTile.dart';
+//import 'TodoTile.dart';
 
 List<Widget> drawerContent() {
   return <Widget>[
@@ -41,7 +42,7 @@ List<Widget> drawerContent() {
     PopUntilTile(),
     PushTile(),
     PushAndRemoveUntilTile(),
-    PushNamed(),
+    //PushNamed(),
     PushNamedAndRemoveUntilTile(),
     PushReplacement(),
     PushReplacementNamedTile(),

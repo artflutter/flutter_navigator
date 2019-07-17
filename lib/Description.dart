@@ -5,7 +5,7 @@ class Description extends StatelessWidget {
 
   final List<String> description;
 
-  final RaisedButton button;
+  final Widget button;
 
   Description(
       {Key key,

@@ -14,7 +14,8 @@ class MayBePopRoute extends StatelessWidget {
           'Imagine you are on the initial Route and somebody mistakenly tried to pop this screen.',
           'Popping the only screen on the stack would close your app, because then it has no route to display.',
           'You definitely don’t want your user to have such an unexpected user experience.',
-          'That’s where maybePop() will help you. So it’s like, pop only if you can. Try to long press on the `maybePop` menu item.'
+          'That’s where maybePop() will help you. So it’s like, pop only if you can. Try to long press on the `maybePop` menu item.',
+          'If you press the button double pop will close this route and the drawer'
         ],
         button: RaisedButton(
           child: Text('Call maybePop 2 times'),

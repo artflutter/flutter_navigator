@@ -13,16 +13,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
+//  int _counter = 0;
   final key = GlobalKey();
 
   final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+//  void _incrementCounter() {
+//    setState(() {
+//      _counter++;
+//    });
+//  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,29 +31,19 @@ class _HomePageState extends State<HomePage> {
       title: Text(widget.title),
     );
     return Scaffold(
-        key: scaffoldKey,
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: drawerContent(),
-          ),
+      key: scaffoldKey,
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: drawerContent(),
         ),
-        appBar: appBar,
-        body: Description(
-            title: 'asdfasdf',
-            description: ['asdfasdf', 'fasdfasdf'],
-            button: null),
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            //SelectionButton(),
-            FloatingActionButton(
-//              heroTag: "Named",
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: Icon(Icons.plus_one),
-            ),
-          ],
-        ));
+      ),
+      appBar: appBar,
+      body: Description(
+        title: 'asdfasdf',
+        description: ['asdfasdf', 'fasdfasdf'],
+        button: null,
+      ),
+    );
   }
 }
