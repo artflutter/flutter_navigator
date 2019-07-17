@@ -7,7 +7,7 @@ class PushTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+++push / pushNamed'),
+      title: Text('+push / pushNamed'),
       onTap: () {
         Navigator.push(
           context,

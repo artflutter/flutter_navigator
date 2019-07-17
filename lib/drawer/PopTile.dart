@@ -4,7 +4,7 @@ class PopTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+++pop'),
+      title: Text('+pop'),
       onTap: () {
         Navigator.pop(context);
         Scaffold.of(context)

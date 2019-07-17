@@ -4,7 +4,7 @@ class CanPopTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+++canPop'),
+      title: Text('+canPop'),
       onTap: () {
         Navigator.pushNamed(context, '/canPop');
       },
