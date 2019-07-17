@@ -5,6 +5,7 @@ import 'package:flutter_routing/routes/ToDoRoute.dart';
 import 'package:flutter_routing/drawer/main.dart';
 
 import 'HomePage.dart';
+import 'routes/CanPopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
 import 'routes/OnUnknownRoute.dart';
 import 'routes/PopAndPushNamed.dart';
@@ -24,8 +25,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Route replaceRoute;
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -34,6 +33,7 @@ class MyApp extends StatelessWidget {
       onUnknownRoute: (RouteSettings setting) =>
           MaterialPageRoute(builder: (context) => OnUnknownRoute()),
       routes: {
+        '/canPop': (context) => CanPopRoute(),
         '/maybePop': (context) => MayBePopRoute(),
         '/pushReplacement': (context) => PushReplacementRoute(),
         '/removeRoute': (context) => RemoveRoute(),

@@ -4,9 +4,9 @@ class MayBePopTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('maybePop'),
+      title: Text('+++maybePop'),
       onTap: () {
-        Navigator.pushNamed(context, '/maybePop');
+        Navigator.popAndPushNamed(context, '/maybePop');
       },
       onLongPress: () async {
         Scaffold.of(context)
