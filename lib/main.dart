@@ -10,9 +10,9 @@ import 'routes/PopAndPushNamed.dart';
 import 'routes/PopUntilRoute.dart';
 import 'routes/PushAndRemoveUntilRoute.dart';
 import 'routes/PushNamedRoute.dart';
-import 'routes/PushReplacementNamedRoute.dart';
 import 'routes/PushReplacementRoute.dart';
 import 'routes/RemoveRoute.dart';
+import 'routes/RemoveRouteBelow.dart';
 import 'routes/ReplaceRoute.dart';
 import 'routes/ReplaceRouteBelow.dart';
 
@@ -37,9 +37,9 @@ class MyApp extends StatelessWidget {
         '/pushAndRemoveUntil': (context) => PushAndRemoveUntil(),
         '/pushNamed': (context) => PushNamedRoute(),
         '/pushReplacement': (context) => PushReplacementRoute(),
-        '/pushReplacementNamed': (context) => PushReplacementNamedRoute(),
+//        '/pushReplacementNamed': (context) => PushReplacementNamedRoute(),
         '/removeRoute': (context) => RemoveRoute(),
-        '/removeRouteBelow': (context) => ReplaceRouteBelow(),
+        '/removeRouteBelow': (context) => RemoveRouteBelow(),
         '/replace': (context) => ReplaceRoute(),
         '/replaceRouteBelow': (context) => ReplaceRouteBelow(),
         '/todo': (context) => ToDoRoute(),

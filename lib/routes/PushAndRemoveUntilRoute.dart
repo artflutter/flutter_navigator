@@ -26,13 +26,14 @@ class PushAndRemoveUntil extends StatelessWidget {
           title: 'push[Named]AndRemoveUntil',
           description: <String>[
             'Push the given route onto the navigator and then remove all the previous routes until the predicate returns true.',
-            'Use `ModalRoute.withName` as predicate carefully. If the targe route name handles pop internally(like the root route with opened drawer) `ModalRoute.withName` will return `false` this could lead to unexpected results'
+            'Use `ModalRoute.withName` as predicate carefully. If the targe route name handles pop internally(like the root route with opened drawer) `ModalRoute.withName` will return `false` this could lead to unexpected results',
+            'The actual behaviour has bugs on current(1.7.8 version). There is a merged ticke `Navigator pushAndRemoveUntil Fix #35223` that aims to fix those issues'
           ],
           button: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               RaisedButton(
-                child: Text('Replace `/` with `custom` predicate'),
+                child: Text('Replace until `/` with `custom` predicate'),
                 onPressed: () => Navigator.pushAndRemoveUntil(
                   context,
                   replacementRoute,
@@ -42,7 +43,7 @@ class PushAndRemoveUntil extends StatelessWidget {
                 ),
               ),
               RaisedButton(
-                child: Text('Replace `/` with `ModalRoute` predicate'),
+                child: Text('Replace until `/` with `ModalRoute` predicate'),
                 onPressed: () => Navigator.pushAndRemoveUntil(
                   context,
                   replacementRoute,

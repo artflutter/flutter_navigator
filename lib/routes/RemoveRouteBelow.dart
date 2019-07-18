@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import '../Description.dart';
 import 'SampleRouteItem.dart';
 
-class RemoveRoute extends StatelessWidget {
+class RemoveRouteBelow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SampleRouteItem(
-      title: 'Remove route',
+      title: 'Remove route below',
       button: Description(
-        title: 'removeRoute',
+        title: 'removeRouteBelow',
         description: <String>[
           '',
         ],
         button: RaisedButton(
-          child: Text('Remove current route'),
+          child: Text('Remove route below the current route'),
           onPressed: () =>
-              Navigator.removeRoute(context, ModalRoute.of(context)),
+              Navigator.removeRouteBelow(context, ModalRoute.of(context)),
         ),
       ),
     );
