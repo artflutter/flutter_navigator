@@ -4,7 +4,7 @@ class PushAndRemoveUntilTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+pushAndRemoveUntil'),
+      title: Text('+push[Named]AndRemoveUntil'),
       onTap: () {
         Navigator.pushNamed(context, '/pushAndRemoveUntil');
       },

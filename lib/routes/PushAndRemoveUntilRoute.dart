@@ -23,7 +23,7 @@ class PushAndRemoveUntil extends StatelessWidget {
     return SampleRouteItem(
       title: 'Push and remove until',
       button: Description(
-          title: 'pushAndRemoveUntil',
+          title: 'push[Named]AndRemoveUntil',
           description: <String>[
             'Push the given route onto the navigator and then remove all the previous routes until the predicate returns true.',
             'Use `ModalRoute.withName` as predicate carefully. If the targe route name handles pop internally(like the root route with opened drawer) `ModalRoute.withName` will return `false` this could lead to unexpected results'

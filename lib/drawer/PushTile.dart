@@ -7,13 +7,13 @@ class PushTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+push / pushNamed'),
+      title: Text('+push[Named]'),
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => SampleRouteItem(
-              title: 'push / pushNamed',
+              title: 'push[Named]',
               button: Description(
                 title: 'push / pushNamed',
                 description: <String>[
