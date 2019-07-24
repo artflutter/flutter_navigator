@@ -4,7 +4,7 @@ class PopUntilTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+popUntil'),
+      title: Text('popUntil'),
       onTap: () {
         Navigator.pushNamed(context, '/popUntil');
       },

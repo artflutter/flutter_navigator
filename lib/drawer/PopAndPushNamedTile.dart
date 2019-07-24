@@ -4,7 +4,7 @@ class PopAndPushNamedTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('+popAndPushNamed'),
+      title: Text('popAndPushNamed'),
       onTap: () {
         Navigator.popAndPushNamed(context, '/popAndPushNamed');
       },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Description.dart';
+import 'ReplacementRoute.dart';
 import 'SampleRouteItem.dart';
 
 class ReplaceRouteBelow extends StatelessWidget {
@@ -33,14 +34,7 @@ class ReplaceRouteBelow extends StatelessWidget {
                           context,
                           anchorRoute: ModalRoute.of(context),
                           newRoute: MaterialPageRoute(
-                            builder: (context) => SampleRouteItem(
-                              title: 'This route is a replacment',
-                              button: Description(
-                                title: 'This route is a replacment',
-                                description: ['****'],
-                                button: null,
-                              ),
-                            ),
+                            builder: (context) => ReplacementRoute(),
                           ),
                         );
                       },

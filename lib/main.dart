@@ -9,7 +9,6 @@ import 'routes/OnUnknownRoute.dart';
 import 'routes/PopAndPushNamed.dart';
 import 'routes/PopUntilRoute.dart';
 import 'routes/PushAndRemoveUntilRoute.dart';
-import 'routes/PushNamedRoute.dart';
 import 'routes/PushReplacementRoute.dart';
 import 'routes/RemoveRoute.dart';
 import 'routes/RemoveRouteBelow.dart';
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
         '/popAndPushNamed': (context) => PopAndPushNamed(),
         '/popUntil': (context) => PopUntilRoute(),
         '/pushAndRemoveUntil': (context) => PushAndRemoveUntil(),
-        '/pushNamed': (context) => PushNamedRoute(),
+//        '/pushNamed': (context) => PushNamedRoute(),
         '/pushReplacement': (context) => PushReplacementRoute(),
 //        '/pushReplacementNamed': (context) => PushReplacementNamedRoute(),
         '/removeRoute': (context) => RemoveRoute(),
