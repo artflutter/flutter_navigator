@@ -11,7 +11,8 @@ class RemoveRoute extends StatelessWidget {
       button: Description(
         title: 'removeRoute',
         description: <String>[
-          '',
+          'Immediately remove route from the navigator and Route.dispose it.',
+          'The removed route is removed without being completed, so this method does not take a return value argument. No animations are run as a result of this method call.'
         ],
         button: RaisedButton(
           child: Text('Remove current route'),
