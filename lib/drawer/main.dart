@@ -17,13 +17,14 @@ import 'RemoveRouteBelowTile.dart';
 import 'RemoveRouteTile.dart';
 import 'ReplaceRouteBelowTile.dart';
 import 'ReplaceTile.dart';
+import 'SamplesTile.dart';
 import 'StaticTile.dart';
 //import 'TodoTile.dart';
 
 List<Widget> drawerContent() {
   return <Widget>[
     Header(),
-//    SamplesTile(),
+    SamplesTile(),
 //    TodoTile(),
     PropertiesTile(),
     ObserversTile(),

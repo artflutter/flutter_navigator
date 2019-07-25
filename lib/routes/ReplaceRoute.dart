@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_routing/widgets/ToggleButton.dart';
 
 import '../Description.dart';
 import 'ReplacementRoute.dart';
@@ -33,30 +34,20 @@ class ReplaceRoute extends StatelessWidget {
                         'Press back to see the resutls',
                       ],
                       button: Builder(
-                        builder: (context) => RaisedButton(
-                          child: Text('Replcae previous route'),
-                          onPressed: () {
-                            try {
-                              Route route = MaterialPageRoute(
-                                builder: (context) => ReplacementRoute(),
-                              );
-
-                              Navigator.replace(
-                                context,
-                                oldRoute: replaceRoute,
-                                newRoute: route,
-                              );
-                            } catch (e) {
-                              Scaffold.of(context)
-                                ..removeCurrentSnackBar()
-                                ..showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                        "Nothing to replace. There is no more previous route in the stack"),
-                                  ),
-                                );
-                            }
-                          },
+                        builder: (context) => ToggleButton(
+                          replacement: Center(
+                              child: Text(
+                            'Done! You can go back.',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )),
+                          child: Text('Replace previous route'),
+                          onPressed: () => Navigator.replace(
+                            context,
+                            oldRoute: replaceRoute,
+                            newRoute: MaterialPageRoute(
+                              builder: (context) => ReplacementRoute(),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -75,13 +66,7 @@ class ReplaceRoute extends StatelessWidget {
 //                    description: <String>[
 //                      '',
 //                    ],
-//                    button: RaisedButton(
-//                      child: Text('Remove route below current'),
-//                      onPressed: () {
-//                        Navigator.removeRouteBelow(
-//                            context, ModalRoute.of(context));
-//                      },
-//                    ),
+//                    button: ,
 //                  ),
 //                ),
 //              ),

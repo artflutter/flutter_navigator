@@ -1,7 +1,10 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_routing/routes/ToDoRoute.dart';
 
 import 'HomePage.dart';
+import 'config/application.dart';
+import 'config/routes.dart';
 import 'routes/CanPopRoute.dart';
 import 'routes/MayBePopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
@@ -18,6 +21,12 @@ import 'routes/ReplaceRouteBelow.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  MyApp() {
+    final router = Router();
+    Routes.configureRoutes(router);
+    Application.router = router;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: Application.router.generator,
       onUnknownRoute: (RouteSettings setting) =>
           MaterialPageRoute(builder: (context) => OnUnknownRoute()),
       routes: {
