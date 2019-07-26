@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ],
     );
+
     return Scaffold(
       key: scaffoldKey,
       drawer: Drawer(
@@ -54,11 +55,13 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       appBar: appBar,
-      body: Description(
-        title: 'asdfasdf',
-        description: ['asdfasdf', 'fasdfasdf'],
-        button: null,
-      ),
+      body: Builder(builder: (context) {
+        return Description(
+          title: 'asdfasdf',
+          description: ['asdfasdf', 'fasdfasdf'],
+          button: null,
+        );
+      }),
     );
   }
 }

@@ -2,12 +2,14 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_routing/routes/ToDoRoute.dart';
 
+import 'HeroAnimatedRoute.dart';
 import 'HomePage.dart';
 import 'config/application.dart';
 import 'config/routes.dart';
 import 'routes/CanPopRoute.dart';
 import 'routes/MayBePopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
+import 'routes/OnGenerateRoute.dart';
 import 'routes/OnUnknownRoute.dart';
 import 'routes/PopAndPushNamed.dart';
 import 'routes/PopUntilRoute.dart';
@@ -38,6 +40,9 @@ class MyApp extends StatelessWidget {
       onUnknownRoute: (RouteSettings setting) =>
           MaterialPageRoute(builder: (context) => OnUnknownRoute()),
       routes: {
+        '/onGenerateRoute': (context) => OnGenerateRoute(),
+        '/hero': (context) => HeroAnimatedRoute(),
+        '/send': (context) => ToDoRoute(),
         '/canPop': (context) => CanPopRoute(),
         '/maybePop': (context) => MayBePopRoute(),
         '/namedReplacement': (context) => NamedReplacementRoute(),
@@ -51,7 +56,7 @@ class MyApp extends StatelessWidget {
         '/removeRouteBelow': (context) => RemoveRouteBelow(),
         '/replace': (context) => ReplaceRoute(),
         '/replaceRouteBelow': (context) => ReplaceRouteBelow(),
-        '/todo': (context) => ToDoRoute(),
+//        '/todo': (context) => ToDoRoute(),
       },
       home: HomePage(title: 'Flutter Navigation Demo'),
     );

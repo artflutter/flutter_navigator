@@ -6,15 +6,17 @@ class HeroDetailScreen extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         onTap: () {
-          Navigator.pushNamedAndRemoveUntil(
-              context, '/todo', ModalRoute.withName('/'));
-//          Navigator.pop(context);
+          Navigator.pop(context);
         },
         child: Center(
           child: Hero(
             tag: 'imageHero',
             child: Image.network(
               'https://picsum.photos/250?image=9',
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
+              alignment: Alignment.center,
             ),
           ),
         ),

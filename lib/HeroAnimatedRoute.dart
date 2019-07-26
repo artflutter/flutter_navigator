@@ -15,11 +15,21 @@ class HeroAnimatedRoute extends StatelessWidget {
             return HeroDetailScreen();
           }));
         },
-        child: Hero(
-          tag: 'imageHero',
-          child: Image.network(
-            'https://picsum.photos/250?image=9',
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Hero(
+                  tag: 'imageHero',
+                  child: Image.network(
+                    'https://picsum.photos/250?image=9',
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

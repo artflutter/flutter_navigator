@@ -15,17 +15,23 @@ import 'package:flutter_routing/routes/SampleRouteItem.dart';
 
 Handler rootHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return SampleRouteItem(title: 'Fluro huyuro', button: null);
+  return SampleRouteItem(
+    title: 'Fluro huyuro',
+    button: null,
+  );
 });
 
 Handler demoRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  String message = params["message"]?.first;
-  String colorHex = params["color_hex"]?.first;
-  String result = params["result"]?.first;
-  Color color = Color(0xFFFFFFFF);
+//  String message = params["message"]?.first;
+//  String colorHex = params["color_hex"]?.first;
+//  String result = params["result"]?.first;
+//  Color color = Color(0xFFFFFFFF);
 
-  return SampleRouteItem(title: 'Fluro huyuro part 2', button: null);
+  return SampleRouteItem(
+    title: 'Fluro huyuro part 2',
+    button: null,
+  );
 });
 
 //var demoFunctionHandler = Handler(

@@ -30,11 +30,10 @@ class ReplaceRouteBelow extends StatelessWidget {
                       'Once you click the route below will be replaced with the new one.'
                     ],
                     button: ToggleButton(
-                      replacement: Center(
-                        child: Text(
-                          'Done! You can go back.',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                      replacement: Text(
+                        'Done! You can go back.',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
                       ),
                       child: Text('Replace previous route'),
                       onPressed: () => Navigator.replaceRouteBelow(
