@@ -16,30 +16,32 @@ class Description extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            this.title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              this.title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+            ),
           ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: description
-              .map((text) => Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(text),
-                  ))
-              .toList(),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: this.button,
-        )
-      ],
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: description
+                .map((text) => Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(text),
+                    ))
+                .toList(),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: this.button,
+          )
+        ],
+      ),
     );
   }
 }
