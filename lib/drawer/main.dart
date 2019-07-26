@@ -7,7 +7,6 @@ import 'HeroAnimationTile.dart';
 import 'MayBePopTile.dart';
 import 'ModalTile.dart';
 import 'NestedTile.dart';
-import 'ObserversTile.dart';
 import 'OnGenerateRouteTile.dart';
 import 'OnUnknownRouteTile.dart';
 import 'PopAndPushNamedTile.dart';
@@ -24,7 +23,6 @@ import 'ReplaceTile.dart';
 import 'SamplesTile.dart';
 import 'SendAndReturnTile.dart';
 import 'StaticTile.dart';
-//import 'TodoTile.dart';
 
 List<Widget> drawerContent() {
   return <Widget>[
