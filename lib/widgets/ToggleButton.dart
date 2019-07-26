@@ -10,10 +10,7 @@ class ToggleButton extends StatefulWidget {
 
   final VoidCallback onPressed;
   final Widget child;
-  Widget replacement = Container(
-    width: 0,
-    height: 0,
-  );
+  final Widget replacement;
 
   @override
   _ToggleButtonState createState() => _ToggleButtonState();

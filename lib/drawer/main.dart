@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'AnimationTile.dart';
 import 'CanPopTile.dart';
 import 'Header.dart';
 import 'HeroAnimationTile.dart';
@@ -29,6 +30,7 @@ List<Widget> drawerContent() {
     SamplesTile(),
     HeroAnimationTile(),
     SendAndReturnTile(),
+    AnimationTile(),
 //    TodoTile(),
     PropertiesTile(),
     ObserversTile(),

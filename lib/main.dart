@@ -6,6 +6,7 @@ import 'HeroAnimatedRoute.dart';
 import 'HomePage.dart';
 import 'config/application.dart';
 import 'config/routes.dart';
+import 'routes/AnimationRoute.dart';
 import 'routes/CanPopRoute.dart';
 import 'routes/MayBePopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
           MaterialPageRoute(builder: (context) => OnUnknownRoute()),
       routes: {
         '/onGenerateRoute': (context) => OnGenerateRoute(),
+        '/animation': (context) => AnimationRoute(),
         '/hero': (context) => HeroAnimatedRoute(),
         '/send': (context) => ToDoRoute(),
         '/canPop': (context) => CanPopRoute(),

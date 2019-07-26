@@ -29,21 +29,6 @@ class _HomePageState extends State<HomePage> {
     AppBar appBar = AppBar(
       key: key,
       title: Text(widget.title),
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.map),
-          onPressed: () {
-            Navigator.pushNamed(context, '/fluro');
-          },
-        ),
-        IconButton(
-          icon: Icon(Icons.desktop_mac),
-          onPressed: () {
-//            Navigator.pushNamed(context, '/canPop/123?message=thisIsMessage');
-            Navigator.pushNamed(context, '/canPop/123/const/messageFromConst');
-          },
-        ),
-      ],
     );
 
     return Scaffold(
