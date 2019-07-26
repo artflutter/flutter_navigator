@@ -35,11 +35,11 @@ class ReplaceRoute extends StatelessWidget {
                       ],
                       button: Builder(
                         builder: (context) => ToggleButton(
-                          replacement: Center(
-                              child: Text(
+                          replacement: Text(
                             'Done! You can go back.',
                             style: TextStyle(fontWeight: FontWeight.bold),
-                          )),
+                            textAlign: TextAlign.center,
+                          ),
                           child: Text('Replace previous route'),
                           onPressed: () => Navigator.replace(
                             context,
@@ -55,22 +55,6 @@ class ReplaceRoute extends StatelessWidget {
                 },
               ),
             );
-
-//            Navigator.push(
-//              context,
-//              MaterialPageRoute(
-//                builder: (context) => SampleRouteItem(
-//                  title: 'Remove route below',
-//                  button: Description(
-//                    title: 'removeRouteBelow',
-//                    description: <String>[
-//                      '',
-//                    ],
-//                    button: ,
-//                  ),
-//                ),
-//              ),
-//            );
           },
         ),
       ),

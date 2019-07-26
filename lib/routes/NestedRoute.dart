@@ -12,8 +12,6 @@ class NestedRoute extends StatelessWidget {
         WidgetBuilder builder;
         switch (settings.name) {
           case 'nested/one':
-            // Assume CollectPersonalInfoPage collects personal info and then
-            // navigates to 'signup/choose_credentials'.
             builder = (BuildContext internalContext) => SampleRouteItem(
                 title: 'Nested route one',
                 button: Description(

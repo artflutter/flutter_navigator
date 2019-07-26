@@ -6,9 +6,6 @@ import 'SampleRouteItem.dart';
 class CanPopRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-//    final navigator = Navigator.of(context);
-//    final scaffold = Scaffold.of(context)
-
     return SampleRouteItem(
       title: 'Can pop',
       button: Builder(builder: (context) {
@@ -47,7 +44,6 @@ class CanPopRoute extends StatelessWidget {
                     ),
                   );
               }
-//            Navigator.maybePop(context);
             },
           ),
         );

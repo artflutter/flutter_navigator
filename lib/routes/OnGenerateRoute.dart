@@ -16,9 +16,6 @@ class OnGenerateRoute extends StatelessWidget {
           'Navigation with `Wildcard parameter matching` - /fluro/YourParam/YourMessage(/fluro/:id/:message)',
           'Navigation with `Querystring parameter parsing` /fluro/YourParam?message=YourMessage(/fluro/:id)'
         ],
-
-        //            Navigator.pushNamed(context, '/canPop/123?message=thisIsMessage');
-//        Navigator.pushNamed(context, '/canPop/123/const/messageFromConst');
         button: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[

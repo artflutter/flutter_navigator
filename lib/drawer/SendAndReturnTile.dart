@@ -7,17 +7,6 @@ class SendAndReturnTile extends StatelessWidget {
       title: Text('Send & return data'),
       onTap: () async {
         Navigator.popAndPushNamed(context, '/send');
-
-//        Navigator.pushReplacement(
-//          context,
-//          MaterialPageRoute(
-//            builder: (context) => ToDoDetailsRoute(todo: todos[index]),
-//          ),
-//        );
-
-//        Scaffold.of(context)
-//          ..removeCurrentSnackBar()
-//          ..showSnackBar(SnackBar(content: Text("$result")));
       },
     );
   }
