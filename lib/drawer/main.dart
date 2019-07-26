@@ -5,6 +5,7 @@ import 'CanPopTile.dart';
 import 'Header.dart';
 import 'HeroAnimationTile.dart';
 import 'MayBePopTile.dart';
+import 'ModalTile.dart';
 import 'ObserversTile.dart';
 import 'OnGenerateRouteTile.dart';
 import 'OnUnknownRouteTile.dart';
@@ -31,6 +32,7 @@ List<Widget> drawerContent() {
     HeroAnimationTile(),
     SendAndReturnTile(),
     AnimationTile(),
+    ModalTile(),
 //    TodoTile(),
     PropertiesTile(),
     ObserversTile(),
