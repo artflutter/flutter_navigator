@@ -15,7 +15,7 @@ class ModalTile extends StatelessWidget {
                 pageBuilder: (BuildContext context, _, __) {
                   return GestureDetector(
                       onTap: () => Navigator.pop(context),
-                      child: Center(child: Text('My PageRoute')));
+                      child: Center(child: Text('Design you modal')));
                 },
                 transitionsBuilder:
                     (___, Animation<double> animation, ____, Widget child) {

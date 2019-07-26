@@ -10,6 +10,7 @@ import 'routes/AnimationRoute.dart';
 import 'routes/CanPopRoute.dart';
 import 'routes/MayBePopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
+import 'routes/NestedRoute.dart';
 import 'routes/OnGenerateRoute.dart';
 import 'routes/OnUnknownRoute.dart';
 import 'routes/PopAndPushNamed.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/onGenerateRoute': (context) => OnGenerateRoute(),
         '/animation': (context) => AnimationRoute(),
+        '/nested': (context) => NestedRoute(),
         '/hero': (context) => HeroAnimatedRoute(),
         '/send': (context) => ToDoRoute(),
         '/canPop': (context) => CanPopRoute(),
