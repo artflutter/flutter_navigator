@@ -9,7 +9,7 @@ class PushReplacementRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push replacement [named]',
-      button: Description(
+      child: Description(
         title: 'pushReplacement[Named]',
         description: <String>[
           '`pushReplacement` - replaces current route with the given one',

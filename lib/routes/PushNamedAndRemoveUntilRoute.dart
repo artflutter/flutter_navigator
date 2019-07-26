@@ -7,7 +7,7 @@ class PushNamedAndRemoveUntil extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Push named and remove until',
-      button: RaisedButton(
+      child: RaisedButton(
         child: Text('Press to go back'),
         onPressed: () => Navigator.pushNamedAndRemoveUntil(
           context,

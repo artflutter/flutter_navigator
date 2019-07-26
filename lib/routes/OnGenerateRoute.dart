@@ -8,7 +8,7 @@ class OnGenerateRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'On generate rout',
-      button: Description(
+      child: Description(
         title: 'onGenerateRoute',
         description: <String>[
           'The route generator callback used when the app is navigated to a named route. This is used if routes does not contain the requested route. You can build the whole navigation using this route or use it in conjuction with static routes defintion.',

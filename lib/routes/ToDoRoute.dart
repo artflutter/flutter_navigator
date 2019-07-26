@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_routing/ToDo.dart';
 
 import '../Description.dart';
+import 'SampleRouteItem.dart';
 import 'ToDoDetailsRoute.dart';
 
 class ToDoRoute extends StatelessWidget {
@@ -15,16 +16,15 @@ class ToDoRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Todos'),
-      ),
-      body: Description(
+    return SampleRouteItem(
+      title: 'Todos',
+      child: Description(
           title: 'Todo list',
           description: [
             'This list is a simple demonstration how to pass data between 2 routes'
           ],
           button: ListView.builder(
+//            shrinkWrap: true,
             itemCount: todos.length,
             itemBuilder: (context, index) {
               return ListTile(

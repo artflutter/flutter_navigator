@@ -14,7 +14,7 @@ class NestedRoute extends StatelessWidget {
           case 'nested/one':
             builder = (BuildContext internalContext) => SampleRouteItem(
                 title: 'Nested route one',
-                button: Description(
+                child: Description(
                   title: 'Separete routing',
                   description: [
                     'The following example demonstrates how a nested Navigator can be used to present a standalone user registration journey.',
@@ -37,23 +37,20 @@ class NestedRoute extends StatelessWidget {
             break;
           case 'nested/two':
             builder = (BuildContext internalContext) => SampleRouteItem(
-                  title: 'Nested route one',
-                  button: Description(
+                title: 'Nested route one',
+                child: Description(
                     title: 'Separete routing',
                     description: [
                       'The journey ends here',
                       'Use default \'<\'(back) button to move back or press `I\'m done` to get back to main app'
                     ],
                     button: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        RaisedButton(
-                            child: Text('I\'m done'),
-                            onPressed: () => Navigator.pop(context)),
-                      ],
-                    ),
-                  ),
-                );
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          RaisedButton(
+                              child: Text('I\'m done'),
+                              onPressed: () => Navigator.pop(context))
+                        ])));
             break;
           default:
             throw Exception('Invalid route: ${settings.name}');

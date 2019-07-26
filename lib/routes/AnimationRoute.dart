@@ -14,7 +14,7 @@ class AnimationRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Animation',
-      button: Description(
+      child: Description(
         title: 'Animation',
         description: <String>[
           'Simple animaiton transitions',
@@ -29,7 +29,7 @@ class AnimationRoute extends StatelessWidget {
                     SlideRightRoute(
                         page: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Slided right'],
                                 button: null))))),
@@ -41,7 +41,7 @@ class AnimationRoute extends StatelessWidget {
                         exitPage: this,
                         enterPage: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Double slided'],
                                 button: null))))),
@@ -52,7 +52,7 @@ class AnimationRoute extends StatelessWidget {
                     FadeRoute(
                         page: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Fade transition'],
                                 button: null))))),
@@ -63,7 +63,7 @@ class AnimationRoute extends StatelessWidget {
                     RotationRoute(
                         page: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Rotation route'],
                                 button: null))))),
@@ -74,7 +74,7 @@ class AnimationRoute extends StatelessWidget {
                     ScaleRotateRoute(
                         page: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Scale and rotate'],
                                 button: null))))),
@@ -85,7 +85,7 @@ class AnimationRoute extends StatelessWidget {
                     SizeRoute(
                         page: SampleRouteItem(
                             title: 'Animaiton',
-                            button: Description(
+                            child: Description(
                                 title: 'Animaiton',
                                 description: ['Sized route'],
                                 button: null)))))

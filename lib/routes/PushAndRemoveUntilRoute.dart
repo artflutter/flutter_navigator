@@ -9,7 +9,7 @@ class PushAndRemoveUntil extends StatelessWidget {
     Route replacementRoute = MaterialPageRoute(
       builder: (context) => SampleRouteItem(
         title: 'Replaced page',
-        button: Description(
+        child: Description(
           title: 'Horray!',
           description: <String>[
             'If you used the replacement with `custom` predicate there will be a back button and you can happily return on the home page',
@@ -22,7 +22,7 @@ class PushAndRemoveUntil extends StatelessWidget {
 
     return SampleRouteItem(
       title: 'Push and remove until',
-      button: Description(
+      child: Description(
           title: 'push[Named]AndRemoveUntil',
           description: <String>[
             'Push the given route onto the navigator and then remove all the previous routes until the predicate returns true.',

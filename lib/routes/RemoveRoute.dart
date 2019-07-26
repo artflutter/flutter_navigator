@@ -8,7 +8,7 @@ class RemoveRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Remove route',
-      button: Description(
+      child: Description(
         title: 'removeRoute',
         description: <String>[
           'Immediately remove route from the navigator and Route.dispose it.',

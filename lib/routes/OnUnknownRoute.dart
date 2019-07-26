@@ -8,7 +8,7 @@ class OnUnknownRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Not found route',
-      button: Description(
+      child: Description(
         title: 'onUnknownRoute',
         description: <String>[
           'Called when `onGenerateRoute` fails to generate a route.',

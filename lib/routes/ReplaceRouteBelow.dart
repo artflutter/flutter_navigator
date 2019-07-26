@@ -10,7 +10,7 @@ class ReplaceRouteBelow extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Replace route below',
-      button: Description(
+      child: Description(
         title: 'replaceRouteBelow',
         description: <String>[
           'Replaces a route on the navigator with a new route. The route to be replaced is the one below the given anchorRoute.',
@@ -24,7 +24,7 @@ class ReplaceRouteBelow extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => SampleRouteItem(
                   title: 'Replace route below',
-                  button: Description(
+                  child: Description(
                     title: 'replaceRouteBelow',
                     description: <String>[
                       'Once you click the route below will be replaced with the new one.'

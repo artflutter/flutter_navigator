@@ -8,7 +8,7 @@ class ReplacementRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'This route is a replacment',
-      button: Description(
+      child: Description(
         title: 'This route is a replacment',
         description: [],
         button: null,

@@ -35,13 +35,9 @@ class Description extends StatelessWidget {
                   ))
               .toList(),
         ),
-        Flexible(
-          fit: FlexFit.loose,
-          flex: 1,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: this.button,
-          ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: this.button,
         )
       ],
     );

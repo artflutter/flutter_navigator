@@ -7,7 +7,7 @@ class NamedReplacementRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Named replacement',
-      button: RaisedButton(
+      child: RaisedButton(
         child: Text('Press to go back'),
         onPressed: () => Navigator.pop(context),
       ),

@@ -8,7 +8,7 @@ class CanPopRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Can pop',
-      button: Builder(builder: (context) {
+      child: Builder(builder: (context) {
         final navigator = Navigator.of(context);
         final scaffold = Scaffold.of(context);
 

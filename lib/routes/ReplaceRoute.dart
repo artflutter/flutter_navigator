@@ -12,7 +12,7 @@ class ReplaceRoute extends StatelessWidget {
 
     return SampleRouteItem(
       title: 'Replace route',
-      button: Description(
+      child: Description(
         title: 'replaceRoute',
         description: <String>[
           'Replaces a route on the navigator with a new route.',
@@ -24,10 +24,10 @@ class ReplaceRoute extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context1) {
+                builder: (internalContext) {
                   return SampleRouteItem(
                     title: 'Replace route',
-                    button: Description(
+                    child: Description(
                       title: 'Replace route',
                       description: [
                         'If you press the button the previous route will be replaced',

@@ -8,7 +8,7 @@ class PopUntilRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Pop until',
-      button: Description(
+      child: Description(
         title: 'popUntil',
         description: <String>[
           'Calls pop repeatedly on the navigator until the predicate returns true.',

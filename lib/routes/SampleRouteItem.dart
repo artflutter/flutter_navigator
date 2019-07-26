@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class SampleRouteItem extends StatelessWidget {
   final String title;
 
-  final Widget button;
+  final Widget child;
 
-  SampleRouteItem({Key key, @required this.title, @required this.button})
+  SampleRouteItem({Key key, @required this.title, @required this.child})
       : super(key: key);
 
   @override
@@ -14,6 +14,6 @@ class SampleRouteItem extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.title),
         ),
-        body: this.button);
+        body: this.child);
   }
 }

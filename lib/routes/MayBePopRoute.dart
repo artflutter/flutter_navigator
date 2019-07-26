@@ -8,7 +8,7 @@ class MayBePopRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Maybe pop',
-      button: Description(
+      child: Description(
         title: 'maybePop',
         description: <String>[
           'Imagine you are on the initial Route and somebody mistakenly tried to pop this screen.',

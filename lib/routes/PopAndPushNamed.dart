@@ -8,7 +8,7 @@ class PopAndPushNamed extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Pop and push named',
-      button: Description(
+      child: Description(
         title: 'popAndPushNamed',
         description: <String>[
           'Pop the current route off the navigator and push a named route in its place.',

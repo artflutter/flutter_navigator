@@ -19,7 +19,7 @@ final fluroRouteHandler = Handler(
 
   return SampleRouteItem(
     title: 'Fluro routing',
-    button: Description(
+    child: Description(
       title: 'Route id - $id',
       description: [message],
       button: null,

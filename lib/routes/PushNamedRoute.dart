@@ -8,7 +8,7 @@ class PushNamedRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'push[Named]',
-      button: Description(
+      child: Description(
         title: 'push / pushNamed',
         description: <String>[
           '`push` - adds the given route onto the navigator',

@@ -8,7 +8,7 @@ class RemoveRouteBelow extends StatelessWidget {
   Widget build(BuildContext context) {
     return SampleRouteItem(
       title: 'Remove route below',
-      button: Description(
+      child: Description(
         title: 'removeRouteBelow',
         description: <String>[
           'Immediately remove a route from the navigator and Route.dispose it. The route to be replaced is the one below the given anchorRoute.',
@@ -23,7 +23,7 @@ class RemoveRouteBelow extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => SampleRouteItem(
                   title: 'Remove route below',
-                  button: Description(
+                  child: Description(
                     title: 'removeRouteBelow',
                     description: <String>[
                       'Each press on the button removes one route below current',
