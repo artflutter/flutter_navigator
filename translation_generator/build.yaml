@@ -1,0 +1,8 @@
+builders:
+  translation_generator:
+    import: "package:translation_generator/builder.dart"
+    builder_factories: ["mainGenerator"]
+    build_extensions: {".dart": [".translation.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]

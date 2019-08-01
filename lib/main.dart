@@ -1,5 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_routing/locale/localizationDelegate.dart';
 import 'package:flutter_routing/routes/ToDoRoute.dart';
 
 import 'HeroAnimatedRoute.dart';
@@ -38,6 +40,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      localizationsDelegates: [
+        new AppLocalizationsDelegate(newLocale: new Locale("en", "")),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
       onGenerateRoute: Application.router.generator,
       onUnknownRoute: (RouteSettings setting) =>
           MaterialPageRoute(builder: (context) => OnUnknownRoute()),
