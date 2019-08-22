@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'HeroDetailScreen.dart';
+import 'HeroDetailRoute.dart';
 
 class HeroAnimatedRoute extends StatelessWidget {
   @override
@@ -12,11 +12,11 @@ class HeroAnimatedRoute extends StatelessWidget {
       body: GestureDetector(
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (_) {
-            return HeroDetailScreen();
+            return HeroDetailRoute();
           }));
         },
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+//          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -29,6 +29,7 @@ class HeroAnimatedRoute extends StatelessWidget {
                 ),
               ],
             ),
+            Text('Click to zoom')
           ],
         ),
       ),

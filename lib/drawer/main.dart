@@ -23,11 +23,15 @@ import 'ReplaceTile.dart';
 import 'SamplesTile.dart';
 import 'SendAndReturnTile.dart';
 import 'StaticTile.dart';
+import 'TabBottomNavigationTile.dart';
+import 'TabTopNavigationTile.dart';
 
 List<Widget> drawerContent() {
   return <Widget>[
     Header(),
     SamplesTile(),
+    TabBottomNavigationTile(),
+    TabTopNavigationTile(),
     HeroAnimationTile(),
     SendAndReturnTile(),
     AnimationTile(),

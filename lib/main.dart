@@ -2,12 +2,12 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_routing/routes/ToDoRoute.dart';
 
-import 'HeroAnimatedRoute.dart';
 import 'HomePage.dart';
 import 'config/application.dart';
 import 'config/routes.dart';
 import 'routes/AnimationRoute.dart';
 import 'routes/CanPopRoute.dart';
+import 'routes/HeroAnimatedRoute.dart';
 import 'routes/MayBePopRoute.dart';
 import 'routes/NamedReplacementRoute.dart';
 import 'routes/NestedRoute.dart';
@@ -21,6 +21,8 @@ import 'routes/RemoveRoute.dart';
 import 'routes/RemoveRouteBelow.dart';
 import 'routes/ReplaceRoute.dart';
 import 'routes/ReplaceRouteBelow.dart';
+import 'routes/TabBottomNavigationRoute.dart';
+import 'routes/TabTopNavigationRoute.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
         '/onGenerateRoute': (context) => OnGenerateRoute(),
         '/animation': (context) => AnimationRoute(),
         '/nested': (context) => NestedRoute(),
+        '/tabTop': (context) => TabTopNavigationRoute(),
+        '/tabBottom': (context) => TabBottomNavigationRoute(),
         '/hero': (context) => HeroAnimatedRoute(),
         '/send': (context) => ToDoRoute(),
         '/canPop': (context) => CanPopRoute(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HeroDetailScreen extends StatelessWidget {
+class HeroDetailRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class HeroDetailScreen extends StatelessWidget {
             tag: 'imageHero',
             child: Image.network(
               'https://picsum.photos/250?image=9',
-              fit: BoxFit.cover,
+              fit: BoxFit.fitWidth,
               height: double.infinity,
               width: double.infinity,
               alignment: Alignment.center,
